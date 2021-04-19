@@ -31,7 +31,7 @@ public class MeritAmericaBankApp {
 
 	@PostMapping(value = "/AccountHolder")
 	
-	public AccountHolder addAccountHolder(@RequestBody  AccountHolder accountHolder) {
+public AccountHolder addAccountHolder(@RequestBody  AccountHolder accountHolder) {
 		MeritBank.addAccountHolder(accountHolder);
 		return accountHolder;
 	}
@@ -42,7 +42,7 @@ public class MeritAmericaBankApp {
 	}
 	// TODO complete
 	@GetMapping(value = "/AccountHolder/{id}")
-	public AccountHolder getAccountHolderById(@PathVariable("id") long id) throws Exception {
+	public AccountHolder getAccountHolderById(@PathVariable("id") AccountHolder id) throws Exception {
 		AccountHolder accountHolder = MeritBank.addAccountHolder(id);
 		if(accountHolder == null) { 
 		

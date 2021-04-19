@@ -229,4 +229,10 @@ public class AccountHolder{
 		this.id = idGen++;
 	}
 
+	public static AccountHolder readFromString(String line) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
 }
