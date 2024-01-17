@@ -2,6 +2,7 @@ package com.meritamerica.assignment5.service;
 
 import java.util.List;
 
+import com.meritamerica.assignment5.Exceptions.NoSuchAccountException;
 import com.meritamerica.assignment5.models.AccountHolder;
 import com.meritamerica.assignment5.models.CDAccount;
 import com.meritamerica.assignment5.models.CDOffering;
@@ -14,9 +15,8 @@ public interface Bank {
 	public CDOffering addCDOffering(CDOffering cdOffering);
 	public void clearCDOfferings();
 	public List<AccountHolder> getAccountHolders();
-	public AccountHolder getAccountHolder(int id);
+	public AccountHolder getAccountHolder(int id) throws NoSuchAccountException;
 	public AccountHolder addAccountHolder(AccountHolder accountHolder);
-	public double getAllAccountsBalances();
 	public CheckingAccount addCheckingAccount(int id, CheckingAccount checkingAccount);
 	public SavingsAccount addSavingsAccount(int id, SavingsAccount savingsAccount);
 	public CDAccount addCDAccount(int id, CDAccount cdAccount);

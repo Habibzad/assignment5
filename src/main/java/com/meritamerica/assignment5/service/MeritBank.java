@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.meritamerica.assignment5.Exceptions.AccountHolderNotFoundException;
+import com.meritamerica.assignment5.Exceptions.NoSuchAccountException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.meritamerica.assignment5.Exceptions.ExceedsCombinedBalanceLimitException;
@@ -17,8 +19,10 @@ import com.meritamerica.assignment5.models.SavingsAccount;
 @Service
 public class MeritBank implements Bank{
 
-	List<CDOffering> cdOfferings;
-	List<AccountHolder> accountHolders;
+	private Logger logger = LoggerFactory.getLogger(MeritBank.class);
+
+	private final List<CDOffering> cdOfferings;
+	private final List<AccountHolder> accountHolders;
 
 //	Constructor
 	public MeritBank() {
@@ -28,6 +32,7 @@ public class MeritBank implements Bank{
 
 	@Override
 	public List<CDOffering> getCDOfferings() {
+		logger.info("returning cd offerings");
 		return cdOfferings;
 	}
 
@@ -59,11 +64,11 @@ public class MeritBank implements Bank{
 	}
 
 	@Override
-	public AccountHolder getAccountHolder(int id) {
+	public AccountHolder getAccountHolder(int id) throws NoSuchAccountException {
 		try {
 			return accountHolders.stream().filter(accountHolder1 -> accountHolder1.getId()==id).collect(Collectors.toList()).get(0);
 		}catch (Exception e){
-			throw new AccountHolderNotFoundException(String.format("No account holder was found for id: %d", id));
+			throw new NoSuchAccountException(String.format("No account holder was found for id: %d", id));
 		}
 	}
 
@@ -73,13 +78,6 @@ public class MeritBank implements Bank{
 		return accountHolder;
 	}
 
-	// @Override
-	/*
-	 * public double getAllAccountsBalances() { double total = 0; for (int i = 0; i
-	 * < accountHolders.size(); i++) { total +=
-	 * accountHolders.get(i).getCombinedBalance(); } return total; }
-	 */
-
 	@Override
 	public CheckingAccount addCheckingAccount(int id, CheckingAccount checkingAccount) {
 		for (AccountHolder ch : accountHolders) {
@@ -87,7 +85,7 @@ public class MeritBank implements Bank{
 				try {
 					ch.addCheckingAccount(checkingAccount);
 				} catch (ExceedsCombinedBalanceLimitException e) {
-					e.printStackTrace();
+					logger.debug(String.valueOf(e));
 				}
 			}
 		}
@@ -101,7 +99,7 @@ public class MeritBank implements Bank{
 				try {
 					ch.addSavingsAccount(savingsAccount);
 				} catch (ExceedsCombinedBalanceLimitException e) {
-					e.printStackTrace();
+					logger.debug(String.valueOf(e));
 				}
 			}
 		}
@@ -115,17 +113,12 @@ public class MeritBank implements Bank{
 				try {
 					ch.addCdAccount(cdAccount);
 				} catch (ExceedsCombinedBalanceLimitException e) {
-					e.printStackTrace();
+					logger.debug(String.valueOf(e));
 				}
 			}
 		}
 		return cdAccount;
 	}
 
-	@Override // To be deleted
-	public double getAllAccountsBalances() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
 }
