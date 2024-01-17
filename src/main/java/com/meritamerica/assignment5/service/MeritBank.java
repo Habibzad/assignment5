@@ -2,7 +2,9 @@ package com.meritamerica.assignment5.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
+import com.meritamerica.assignment5.Exceptions.AccountHolderNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.meritamerica.assignment5.Exceptions.ExceedsCombinedBalanceLimitException;
@@ -20,8 +22,8 @@ public class MeritBank implements Bank{
 
 //	Constructor
 	public MeritBank() {
-		this.cdOfferings = new ArrayList<CDOffering>();
-		this.accountHolders = new ArrayList<AccountHolder>();
+		this.cdOfferings = new ArrayList<>();
+		this.accountHolders = new ArrayList<>();
 	}
 
 	@Override
@@ -58,13 +60,11 @@ public class MeritBank implements Bank{
 
 	@Override
 	public AccountHolder getAccountHolder(int id) {
-		AccountHolder accountHolder = null;
-		for (AccountHolder accholder : accountHolders) {
-			if (accholder.getId() == id) {
-				accountHolder = accholder;
-			}
+		try {
+			return accountHolders.stream().filter(accountHolder1 -> accountHolder1.getId()==id).collect(Collectors.toList()).get(0);
+		}catch (Exception e){
+			throw new AccountHolderNotFoundException(String.format("No account holder was found for id: %d", id));
 		}
-		return accountHolder;
 	}
 
 	@Override

@@ -1,16 +1,91 @@
-2021-04-23 10:58:22.854  INFO 14264 --- [main] c.m.assignment5.Assignment5Application   : Starting Assignment5Application using Java 15.0.2 on DESKTOP-92EDAN7 with PID 14264 (C:\Users\ahmad\Documents\Code\Spring\assignment5\target\classes started by ahmad in C:\Users\ahmad\Documents\Code\Spring\assignment5)
-2021-04-23 10:58:22.856  INFO 14264 --- [main] c.m.assignment5.Assignment5Application   : No active profile set, falling back to default profiles: default
-2021-04-23 10:58:23.352  INFO 14264 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-04-23 10:58:23.358  INFO 14264 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-04-23 10:58:23.358  INFO 14264 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
-2021-04-23 10:58:23.433  INFO 14264 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-04-23 10:58:23.433  INFO 14264 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 549 ms
-2021-04-23 10:58:23.538  INFO 14264 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-23 10:58:23.650  INFO 14264 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-04-23 10:58:23.657  INFO 14264 --- [main] c.m.assignment5.Assignment5Application   : Started Assignment5Application in 1.042 seconds (JVM running for 1.5)
-2021-04-23 10:59:38.068  INFO 14264 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-04-23 10:59:38.068  INFO 14264 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-04-23 10:59:38.069  INFO 14264 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2021-04-23 10:59:38.078  WARN 14264 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
-2021-04-23 11:14:27.524  INFO 14264 --- [RMI TCP Connection(25)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2021-04-23 11:14:27.544  INFO 14264 --- [RMI TCP Connection(25)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2024-01-17 18:00:24.339  INFO 6012 --- [main] c.m.assignment5.Assignment5Application   : Starting Assignment5Application using Java 21.0.1 on instructor with PID 6012 (C:\Users\Masou\Desktop\assignment5\target\classes started by Masou in C:\Users\Masou\Desktop\assignment5)
+2024-01-17 18:00:24.342  INFO 6012 --- [main] c.m.assignment5.Assignment5Application   : No active profile set, falling back to default profiles: default
+2024-01-17 18:00:25.198  INFO 6012 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-17 18:00:25.208  INFO 6012 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-17 18:00:25.209  INFO 6012 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2024-01-17 18:00:25.276  INFO 6012 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-17 18:00:25.277  INFO 6012 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 892 ms
+2024-01-17 18:00:25.444  INFO 6012 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2024-01-17 18:00:25.646  INFO 6012 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-17 18:00:25.654  INFO 6012 --- [main] c.m.assignment5.Assignment5Application   : Started Assignment5Application in 1.704 seconds (JVM running for 2.757)
+2024-01-17 18:01:03.871  INFO 6012 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-17 18:01:03.871  INFO 6012 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-17 18:01:03.872  INFO 6012 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-17 18:01:14.671  WARN 6012 --- [http-nio-8080-exec-2] c.m.a.controllers.BankController         : No account exists
+2024-01-17 18:01:41.441  INFO 6012 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2024-01-17 18:01:44.856  INFO 6132 --- [main] c.m.assignment5.Assignment5Application   : Starting Assignment5Application using Java 21.0.1 on instructor with PID 6132 (C:\Users\Masou\Desktop\assignment5\target\classes started by Masou in C:\Users\Masou\Desktop\assignment5)
+2024-01-17 18:01:44.858  INFO 6132 --- [main] c.m.assignment5.Assignment5Application   : No active profile set, falling back to default profiles: default
+2024-01-17 18:01:45.515  INFO 6132 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-17 18:01:45.522  INFO 6132 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-17 18:01:45.523  INFO 6132 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2024-01-17 18:01:45.567  INFO 6132 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-17 18:01:45.567  INFO 6132 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 663 ms
+2024-01-17 18:01:45.687  INFO 6132 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2024-01-17 18:01:45.853  INFO 6132 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-17 18:01:45.860  INFO 6132 --- [main] c.m.assignment5.Assignment5Application   : Started Assignment5Application in 1.319 seconds (JVM running for 1.814)
+2024-01-17 18:01:49.607  INFO 6132 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-17 18:01:49.607  INFO 6132 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-17 18:01:49.608  INFO 6132 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-17 18:01:49.628  WARN 6132 --- [http-nio-8080-exec-2] c.m.a.controllers.BankController         : No account exists
+2024-01-17 18:02:42.640  INFO 6132 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2024-01-17 18:02:45.052  INFO 2636 --- [main] c.m.assignment5.Assignment5Application   : Starting Assignment5Application using Java 21.0.1 on instructor with PID 2636 (C:\Users\Masou\Desktop\assignment5\target\classes started by Masou in C:\Users\Masou\Desktop\assignment5)
+2024-01-17 18:02:45.053  INFO 2636 --- [main] c.m.assignment5.Assignment5Application   : No active profile set, falling back to default profiles: default
+2024-01-17 18:02:45.676  INFO 2636 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-17 18:02:45.682  INFO 2636 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-17 18:02:45.682  INFO 2636 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2024-01-17 18:02:45.727  INFO 2636 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-17 18:02:45.727  INFO 2636 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 631 ms
+2024-01-17 18:02:45.846  INFO 2636 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2024-01-17 18:02:46.011  INFO 2636 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-17 18:02:46.017  INFO 2636 --- [main] c.m.assignment5.Assignment5Application   : Started Assignment5Application in 1.268 seconds (JVM running for 1.757)
+2024-01-17 18:02:53.138  INFO 2636 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-17 18:02:53.138  INFO 2636 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-17 18:02:53.139  INFO 2636 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-17 18:02:53.162  WARN 2636 --- [http-nio-8080-exec-2] c.m.a.controllers.BankController         : No account exists
+2024-01-17 18:05:56.395  INFO 2636 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2024-01-17 18:05:59.188  INFO 1828 --- [main] c.m.assignment5.Assignment5Application   : Starting Assignment5Application using Java 21.0.1 on instructor with PID 1828 (C:\Users\Masou\Desktop\assignment5\target\classes started by Masou in C:\Users\Masou\Desktop\assignment5)
+2024-01-17 18:05:59.190  INFO 1828 --- [main] c.m.assignment5.Assignment5Application   : No active profile set, falling back to default profiles: default
+2024-01-17 18:05:59.820  INFO 1828 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-17 18:05:59.827  INFO 1828 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-17 18:05:59.827  INFO 1828 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2024-01-17 18:05:59.898  INFO 1828 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-17 18:05:59.898  INFO 1828 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 668 ms
+2024-01-17 18:06:00.023  INFO 1828 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2024-01-17 18:06:00.179  INFO 1828 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-17 18:06:00.186  INFO 1828 --- [main] c.m.assignment5.Assignment5Application   : Started Assignment5Application in 1.288 seconds (JVM running for 1.781)
+2024-01-17 18:06:06.827  INFO 1828 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-17 18:06:06.827  INFO 1828 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-17 18:06:06.828  INFO 1828 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-17 18:06:06.851  WARN 1828 --- [http-nio-8080-exec-3] c.m.a.controllers.BankController         : No account exists
+2024-01-17 18:06:29.355  WARN 1828 --- [http-nio-8080-exec-2] c.m.a.controllers.BankController         : No account exists
+2024-01-17 18:07:13.106  INFO 1828 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2024-01-17 18:07:15.638  INFO 1804 --- [main] c.m.assignment5.Assignment5Application   : Starting Assignment5Application using Java 21.0.1 on instructor with PID 1804 (C:\Users\Masou\Desktop\assignment5\target\classes started by Masou in C:\Users\Masou\Desktop\assignment5)
+2024-01-17 18:07:15.641  INFO 1804 --- [main] c.m.assignment5.Assignment5Application   : No active profile set, falling back to default profiles: default
+2024-01-17 18:07:16.260  INFO 1804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-17 18:07:16.267  INFO 1804 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-17 18:07:16.267  INFO 1804 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2024-01-17 18:07:16.316  INFO 1804 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-17 18:07:16.317  INFO 1804 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 639 ms
+2024-01-17 18:07:16.445  INFO 1804 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2024-01-17 18:07:16.597  INFO 1804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-17 18:07:16.604  INFO 1804 --- [main] c.m.assignment5.Assignment5Application   : Started Assignment5Application in 1.253 seconds (JVM running for 1.743)
+2024-01-17 18:07:23.505  INFO 1804 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-17 18:07:23.505  INFO 1804 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-17 18:07:23.506  INFO 1804 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-17 18:07:23.527  WARN 1804 --- [http-nio-8080-exec-2] c.m.a.controllers.BankController         : No account exists
+2024-01-17 18:08:48.598  INFO 1804 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2024-01-17 18:08:50.980  INFO 14148 --- [main] c.m.assignment5.Assignment5Application   : Starting Assignment5Application using Java 21.0.1 on instructor with PID 14148 (C:\Users\Masou\Desktop\assignment5\target\classes started by Masou in C:\Users\Masou\Desktop\assignment5)
+2024-01-17 18:08:50.983  INFO 14148 --- [main] c.m.assignment5.Assignment5Application   : No active profile set, falling back to default profiles: default
+2024-01-17 18:08:51.620  INFO 14148 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-17 18:08:51.628  INFO 14148 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-17 18:08:51.628  INFO 14148 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2024-01-17 18:08:51.679  INFO 14148 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-17 18:08:51.680  INFO 14148 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 657 ms
+2024-01-17 18:08:51.801  INFO 14148 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2024-01-17 18:08:51.961  INFO 14148 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-17 18:08:51.968  INFO 14148 --- [main] c.m.assignment5.Assignment5Application   : Started Assignment5Application in 1.274 seconds (JVM running for 1.759)
+2024-01-17 18:08:56.273  INFO 14148 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-17 18:08:56.273  INFO 14148 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-17 18:08:56.274  INFO 14148 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-17 18:08:56.295  WARN 14148 --- [http-nio-8080-exec-1] c.m.a.controllers.BankController         : No account exists
+2024-01-17 18:09:15.286  INFO 14148 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
