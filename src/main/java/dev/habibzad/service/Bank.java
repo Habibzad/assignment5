@@ -1,13 +1,13 @@
-package com.meritamerica.assignment5.service;
+package dev.habibzad.service;
 
 import java.util.List;
 
-import com.meritamerica.assignment5.Exceptions.NoSuchAccountException;
-import com.meritamerica.assignment5.models.AccountHolder;
-import com.meritamerica.assignment5.models.CDAccount;
-import com.meritamerica.assignment5.models.CDOffering;
-import com.meritamerica.assignment5.models.CheckingAccount;
-import com.meritamerica.assignment5.models.SavingsAccount;
+import dev.habibzad.Exceptions.NoSuchAccountException;
+import dev.habibzad.models.AccountHolder;
+import dev.habibzad.models.CDAccount;
+import dev.habibzad.models.CDOffering;
+import dev.habibzad.models.CheckingAccount;
+import dev.habibzad.models.SavingsAccount;
 
 public interface Bank {
 	public List<CDOffering> getCDOfferings();

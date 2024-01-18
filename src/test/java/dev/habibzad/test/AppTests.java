@@ -1,10 +1,10 @@
-package com.meritamerica.assignment5.test;
+package dev.habibzad.test;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Assignment5ApplicationTests {
+class AppTests {
 
 	@Test
 	void contextLoads() {

@@ -1,13 +1,13 @@
-package com.meritamerica.assignment5;
+package dev.habibzad;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Assignment5Application {
+public class App {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Assignment5Application.class, args);
+		SpringApplication.run(App.class, args);
 	}
 
 }

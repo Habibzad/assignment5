@@ -1,4 +1,4 @@
-package com.meritamerica.assignment5.Exceptions;
+package dev.habibzad.Exceptions;
 
 public class ExceedsAvailableBalanceException extends Exception {
 	ExceedsAvailableBalanceException(String errorMessage){

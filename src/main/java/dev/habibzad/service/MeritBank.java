@@ -1,20 +1,20 @@
-package com.meritamerica.assignment5.service;
+package dev.habibzad.service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.meritamerica.assignment5.Exceptions.NoSuchAccountException;
+import dev.habibzad.Exceptions.NoSuchAccountException;
+import dev.habibzad.Exceptions.ExceedsCombinedBalanceLimitException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import com.meritamerica.assignment5.Exceptions.ExceedsCombinedBalanceLimitException;
-import com.meritamerica.assignment5.models.AccountHolder;
-import com.meritamerica.assignment5.models.CDAccount;
-import com.meritamerica.assignment5.models.CDOffering;
-import com.meritamerica.assignment5.models.CheckingAccount;
-import com.meritamerica.assignment5.models.SavingsAccount;
+import dev.habibzad.models.AccountHolder;
+import dev.habibzad.models.CDAccount;
+import dev.habibzad.models.CDOffering;
+import dev.habibzad.models.CheckingAccount;
+import dev.habibzad.models.SavingsAccount;
 
 @Service
 public class MeritBank implements Bank{

@@ -1,23 +1,18 @@
-package com.meritamerica.assignment5.models;
+package dev.habibzad.models;
 
 import java.time.LocalDate;
 
 public class BankAccount {
-//	Account Number Generator
 	private static long nextAccountNumber = 1;
 
-//	Instance Variables	
 	private long accountNumber;
 	private double balance;
 	private double interestRate;
 	private LocalDate openingDate;
 
-//	private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-YYYY");
-//	Default Constructor
 	public BankAccount() {
 	}
 
-//	Parameterized Constructor
 	public BankAccount(double balance) {
 		this.accountNumber = nextAccountNumber++;
 		this.balance = balance;
@@ -25,7 +20,28 @@ public class BankAccount {
 		this.openingDate = LocalDate.now();
 	}
 
-//	Getters and Setters
+	public boolean withdraw(double amount) {
+		if (amount <= this.balance) {
+			this.balance -= amount;
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public boolean deposit(double amount) {
+		if (amount <= 0) {
+			return false;
+		} else {
+			this.balance += amount;
+			return true;
+		}
+	}
+
+	public double futureValue(int years) {
+		return getBalance() * (Math.pow(1 + getInterestRate(), years));
+	}
+
 	public long getAccountNumber() {
 		return accountNumber;
 	}
@@ -58,49 +74,5 @@ public class BankAccount {
 	public String toString() {
 		return "BankAccount [accountNumber=" + accountNumber + ", balance=" + balance + ", interestRate=" + interestRate
 				+ ", openingDate=" + openingDate + "]";
-	}
-
-// Account methods
-	/**
-	 * This method withdraws from the account if the withdraw amount is less than
-	 * balance
-	 * 
-	 * @param amount
-	 * @return boolean
-	 */
-	public boolean withdraw(double amount) {
-		if (amount <= this.balance) {
-			this.balance -= amount;
-			return true;
-		} else {
-			return false;
-		}
-	}
-
-// Deposit Method
-	/**
-	 * This method deposits in the account if the deposit amount is greater than
-	 * zero
-	 * 
-	 * @param amount
-	 * @return boolean
-	 */
-	public boolean deposit(double amount) {
-		if (amount <= 0) {
-			return false;
-		} else {
-			this.balance += amount;
-			return true;
-		}
-	}
-
-	/**
-	 * This method returns future value of the account
-	 * 
-	 * @param years
-	 * @return double
-	 */
-	public double futureValue(int years) {
-		return getBalance() * (Math.pow(1 + getInterestRate(), years));
 	}
 }
