@@ -8,11 +8,13 @@
 		<version>2.4.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.meritamerica.assignment5</groupId>
-	<artifactId>merit-bank</artifactId>
+
+	<groupId>dev.habibzad</groupId>
+	<artifactId>banking-app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>banking-app</name>
 	<description>Simple Banking App</description>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -84,5 +86,6 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+
 	</build>
 </project>
