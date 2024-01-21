@@ -12,50 +12,60 @@ public class AccountHolder {
     private static int nextID = 1;
 
     private int id;
-    @NotBlank(message = "First Name cannot be blank")
     private String firstName;
     private String middleName;
-    @NotBlank(message = "Last Name cannot be blank")
     private String lastName;
-    @NotBlank(message = "SSN cannot be blank")
     private String ssn;
-    private List<CheckingAccount> checkingAccounts;
-    private List<SavingsAccount> savingsAccounts;
-    private List<CDAccount> cdAccounts;
-    private double combinedBalance;
+    private String email;
+    private String phone;
+    private String address;
+    private final List<CheckingAccount> checkingAccounts;
+    private final List<SavingsAccount> savingsAccounts;
+    private final List<CDAccount> cdAccounts;
+    private String username;
 
     public AccountHolder() {
+        this.checkingAccounts = new ArrayList<>();
+        this.savingsAccounts = new ArrayList<>();
+        this.cdAccounts = new ArrayList<>();
     }
 
     // Parameterized Constructor
-    public AccountHolder(String firstName, String middleName, String lastName, String ssn) {
+
+
+    public AccountHolder(String firstName, String middleName, String lastName, String ssn, String email, String phone, String address, String username) {
         this.id = nextID++;
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
         this.ssn = ssn;
-        this.checkingAccounts = new ArrayList<CheckingAccount>();
-        this.savingsAccounts = new ArrayList<SavingsAccount>();
-        this.cdAccounts = new ArrayList<CDAccount>();
+        this.email = email;
+        this.phone = phone;
+        this.address = address;
+        this.checkingAccounts = new ArrayList<>();
+        this.savingsAccounts = new ArrayList<>();
+        this.cdAccounts = new ArrayList<>();
+        this.username = username;
+    }
+
+    public AccountHolder(String firstName, String lastName, String ssn, String email, String phone, String address, String username) {
+        this(firstName, "", lastName, ssn, email, phone, address, username);
     }
 
     public void addCheckingAccount(CheckingAccount checkingAccount) throws ExceedsCombinedBalanceLimitException {
         if (getCombinedBalance() + checkingAccount.getBalance() >= BALANCE_LIMIT) {
             throw new ExceedsCombinedBalanceLimitException("You have reached the maximum total balance across all accounts. Cannot create another account.");
-        } else {
-            this.checkingAccounts.add(checkingAccount);
         }
+        this.checkingAccounts.add(checkingAccount);
     }
 
     public CheckingAccount addCheckingAccount(double openingBalance) throws ExceedsCombinedBalanceLimitException {
         CheckingAccount newCheckingAccount = new CheckingAccount(openingBalance);
         if (getCombinedBalance() + openingBalance >= BALANCE_LIMIT) {
             throw new ExceedsCombinedBalanceLimitException("You have reached the maximum total balance across all accounts. Cannot create another.");
-        } else {
-            this.checkingAccounts.add(newCheckingAccount);
-            return newCheckingAccount;
         }
-
+        this.checkingAccounts.add(newCheckingAccount);
+        return newCheckingAccount;
     }
 
     public void addSavingsAccount(SavingsAccount savingsAccount) throws ExceedsCombinedBalanceLimitException {
@@ -81,10 +91,8 @@ public class AccountHolder {
         if (getCombinedBalance() + cdAccount.getBalance() >= BALANCE_LIMIT) {
             throw new ExceedsCombinedBalanceLimitException("You have reached the maximum total balance across all accounts. Cannot create another account.");
 
-        } else {
-            this.cdAccounts.add(cdAccount);
         }
-
+        this.cdAccounts.add(cdAccount);
     }
 
     public void addCdAccounts(double openingBalance, CDOffering offering) throws ExceedsCombinedBalanceLimitException {
@@ -92,39 +100,26 @@ public class AccountHolder {
         if (getCombinedBalance() + newCDAccount.getBalance() >= BALANCE_LIMIT) {
             throw new ExceedsCombinedBalanceLimitException("You have reached the maximum total balance across all accounts. Cannot create another account.");
 
-        } else {
-            this.cdAccounts.add(newCDAccount);
         }
-
+        this.cdAccounts.add(newCDAccount);
     }
 
     public double getCheckingBalance() {
-        double total = 0;
-        for (CheckingAccount checkingAccount : checkingAccounts) {
-            total += checkingAccount.getBalance();
-        }
-        return total;
+        return checkingAccounts.stream()
+                .mapToDouble(CheckingAccount::getBalance)
+                .sum();
     }
 
     public double getSavingsBalance() {
-        double total = 0;
-        for (SavingsAccount savingsAccount : savingsAccounts) {
-            total += savingsAccount.getBalance();
-        }
-        return total;
+        return savingsAccounts.stream().mapToDouble(SavingsAccount::getBalance).sum();
     }
 
     public double getCDBalance() {
-        double total = 0;
-        for (CDAccount cdAccount : cdAccounts) {
-            total += cdAccount.getBalance();
-        }
-        return total;
+       return cdAccounts.stream().mapToDouble(CDAccount::getBalance).sum();
     }
 
     public double getCombinedBalance() {
-        combinedBalance = getCheckingBalance() + getSavingsBalance() + getCDBalance();
-        return combinedBalance;
+        return getCheckingBalance() + getSavingsBalance() + getCDBalance();
     }
 
     @Override
@@ -195,5 +190,37 @@ public class AccountHolder {
 
     public List<CDAccount> getCdAccounts() {
         return cdAccounts;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

@@ -1,5 +1,6 @@
 package dev.habibzad.security.dto;
 
+import dev.habibzad.models.AccountHolder;
 import dev.habibzad.security.model.User;
 /*
     The acronym DTO is being used for "data transfer object". It means that this type of class is specifically
@@ -10,11 +11,19 @@ import dev.habibzad.security.model.User;
 public class LoginResponseDto {
 
     private String token;
-    private User user;
+    private AccountHolder accountHolder;
 
-    public LoginResponseDto(String token, User user) {
+    public LoginResponseDto(String token, AccountHolder accountHolder) {
         this.token = token;
-        this.user = user;
+        this.accountHolder = accountHolder;
+    }
+
+    public AccountHolder getAccountHolder() {
+        return accountHolder;
+    }
+
+    public void setAccountHolder(AccountHolder accountHolder) {
+        this.accountHolder = accountHolder;
     }
 
     public String getToken() {
@@ -25,11 +34,4 @@ public class LoginResponseDto {
         this.token = token;
     }
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
 }
