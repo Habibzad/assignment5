@@ -18,6 +18,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
@@ -65,7 +66,7 @@ public class AccountHolderController {
         }
     }
     @PreAuthorize("permitAll()")
-    @RequestMapping(path = "/login", method = RequestMethod.POST)
+    @PostMapping(path = "/login")
     public LoginResponseDto login(@Valid @RequestBody LoginDto loginDto) {
 
         UsernamePasswordAuthenticationToken authenticationToken =
